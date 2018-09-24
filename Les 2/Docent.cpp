@@ -1,9 +1,8 @@
 #include "Docent.h"
 
 Docent::Docent(int a, string n, string v)
+	: Persoon(a, n)
 {
-	this->leeftijd = a;
-	this->naam = n;
 	this->vak = v;
 }
 
