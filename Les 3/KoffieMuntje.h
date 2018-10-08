@@ -1,9 +1,12 @@
 #pragma once
 #include "Munt.h"
 
-class KoffieMuntje: public Munt {
-private:
+class KoffieMuntje : public Munt
+{
+	private:
 
-public:
-
+	public:
+		KoffieMuntje();
+		~KoffieMuntje();
+		void DeclareAmmount();
 };
