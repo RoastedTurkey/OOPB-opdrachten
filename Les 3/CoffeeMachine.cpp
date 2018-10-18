@@ -6,12 +6,12 @@ CoffeeMachine::CoffeeMachine()
 
 }
 
-void CoffeeMachine::InsertCoin(Munt* munt)
+void CoffeeMachine::insertCoin(Munt* munt)
 {
 	if (!this->koffmunt)
 	{
 		this->balance = this->balance + munt->value;
-		munt->DeclareAmmount();
+		munt->declareAmmount();
 		std::cout << "Your new balance is" << this->balance << std::endl;
 		std::cout << "You have inserted enough money to buy:" << std::endl;
 		if (this->balance > 0)
@@ -26,21 +26,21 @@ void CoffeeMachine::InsertCoin(Munt* munt)
 		{
 			std::cout << "- deluxe" << std::endl;
 		}
-		munt->~Munt();
+		delete munt;
 	}
 }
 
-void CoffeeMachine::InsertCoin(KoffieMuntje* kofmuntje)
+void CoffeeMachine::insertCoin(KoffieMuntje* kofmuntje)
 {
 	if (!this->koffmunt)
 	{
 		this->koffmunt = true;
-		kofmuntje->~KoffieMuntje();
+		delete kofmuntje;
 		std::cout << "You inserted a coffee coin, you may choose any one drink" << std::endl;
 	}
 }
 
-void CoffeeMachine::FlushBalance()
+void CoffeeMachine::flushBalance()
 {
 	if (!this->koffmunt)
 	{
@@ -64,34 +64,34 @@ void CoffeeMachine::FlushBalance()
 	}
 }
 
-void CoffeeMachine::BrewCoffee()
+void CoffeeMachine::brewCoffee()
 {
-	if (BalanceCheck(0.5))
+	if (balanceCheck(0.5))
 	{
 		//Coffee* kofie = new Coffee();
-		int BrewText(string("coffee"));
+		brewText(std::string("coffee"));
 	}
 }
 
-void CoffeeMachine::BrewCappuccino()
+void CoffeeMachine::brewCappuccino()
 {
-	if (BalanceCheck(1.0))
+	if (balanceCheck(1.0))
 	{
 		//Cappuccino* capu = new Cappuccino();
-		int BrewText(string("cappuccino"));
+		brewText(std::string("cappuccino"));
 	}
 }
 
-void CoffeeMachine::BrewDeluxe()
+void CoffeeMachine::brewDeluxe()
 {
-	if (BalanceCheck(1.5))
+	if (balanceCheck(1.5))
 	{
 		//Deluxe* deluxe = new Deluxe();
-		int BrewText(string("deluxe"));
+		brewText(std::string("deluxe"));
 	}
 }
 
-int CoffeeMachine::BrewText(string kof)
+void CoffeeMachine::brewText(std::string kof)
 {
 	std::cout << "prepairing your" << kof << ":..........:" << std::endl;
 	std::cout << "prepairing your" << kof << ":|.........:" << std::endl;
@@ -108,11 +108,9 @@ int CoffeeMachine::BrewText(string kof)
 
 	char pak;
 	std::cin >> pak;
-
-	return 0;
 }
 
-bool CoffeeMachine::BalanceCheck(float price)
+bool CoffeeMachine::balanceCheck(float price)
 {
 	if (!this->koffmunt && this->balance < price)
 	{

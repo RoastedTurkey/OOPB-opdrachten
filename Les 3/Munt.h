@@ -7,5 +7,5 @@ class Munt
 		float value;
 		Munt(float val);
 		~Munt();
-		virtual void DeclareAmmount();
+		virtual void declareAmmount();
 };

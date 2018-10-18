@@ -6,7 +6,7 @@ FiftyCent::FiftyCent() : Munt(0.5)
 
 }
 
-void FiftyCent::DeclareAmmount()
+void FiftyCent::declareAmmount()
 {
 	std::cout << "50 cents added to balance" << std::endl;
 }

@@ -8,5 +8,5 @@ class Euro : public Munt
 	public:
 		Euro();
 		~Euro();
-		void DeclareAmmount();
+		void declareAmmount();
 };

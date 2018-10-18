@@ -8,5 +8,5 @@ class KoffieMuntje : public Munt
 	public:
 		KoffieMuntje();
 		~KoffieMuntje();
-		void DeclareAmmount();
+		void declareAmmount();
 };

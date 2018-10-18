@@ -14,17 +14,17 @@ int main()
 	Euro* euro = new Euro();
 	KoffieMuntje* kofmunt = new KoffieMuntje();
 
-	machine->InsertCoin(kofmunt);
-	machine->BrewDeluxe();
+	machine->insertCoin(kofmunt);
+	machine->brewDeluxe();
 
-	machine->InsertCoin(euro);
-	machine->FlushBalance();
+	machine->insertCoin(euro);
+	machine->flushBalance();
 
-	machine->InsertCoin(fiftycent);
-	machine->BrewCoffee();
+	machine->insertCoin(fiftycent);
+	machine->brewCoffee();
 
-	machine->InsertCoin(euro);
-	machine->BrewCappuccino();
+	machine->insertCoin(euro);
+	machine->brewCappuccino();
 
 	char piep;
 	std::cin >> piep;

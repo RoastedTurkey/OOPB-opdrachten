@@ -6,7 +6,7 @@ Munt::Munt(float val)
 	this->value = val;
 }
 
-void Munt::DeclareAmmount()
+void Munt::declareAmmount()
 {
 	std::cout << "coin not recognised" << std::endl;
 }

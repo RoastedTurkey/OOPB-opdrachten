@@ -8,5 +8,5 @@ class FiftyCent : public Munt
 	public:
 		FiftyCent();
 		~FiftyCent();
-		void DeclareAmmount();
+		void declareAmmount();
 };

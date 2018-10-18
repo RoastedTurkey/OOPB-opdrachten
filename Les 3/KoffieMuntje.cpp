@@ -6,4 +6,4 @@ KoffieMuntje::KoffieMuntje() : Munt(0.0)
 
 }
 
-void KoffieMuntje::DeclareAmmount() {}
+void KoffieMuntje::declareAmmount() {}

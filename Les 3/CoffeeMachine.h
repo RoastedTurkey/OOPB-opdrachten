@@ -10,12 +10,12 @@ class CoffeeMachine
 		bool koffmunt = false;
 	public:
 		CoffeeMachine();
-		void InsertCoin(Munt* munt);
-		void InsertCoin(KoffieMuntje* kofmuntje);
-		void FlushBalance();
-		void BrewCoffee();
-		void BrewCappuccino();
-		void BrewDeluxe();
-		int BrewText(string kof);
-		bool BalanceCheck(float price);
+		void insertCoin(Munt* munt);
+		void insertCoin(KoffieMuntje* kofmuntje);
+		void flushBalance();
+		void brewCoffee();
+		void brewCappuccino();
+		void brewDeluxe();
+		void brewText(std::string kof);
+		bool balanceCheck(float price);
 };
