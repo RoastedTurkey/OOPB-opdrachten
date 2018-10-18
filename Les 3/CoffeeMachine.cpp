@@ -47,7 +47,7 @@ void CoffeeMachine::flushBalance()
 		int counter = 0;
 		for (int i = 0; i < this->balance; i++)
 		{
-			Euro* flushEuro = new Euro();
+			Euro* euro = new Euro();
 			counter++;
 		}
 		this->balance = this->balance - float(counter);
