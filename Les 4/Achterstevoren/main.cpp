@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 
-#define FILE "D:/Les 4/texts/jabberwocky.txt"
+#define FILE "/Les 4/texts/jabberwocky.txt"
 #define OUTFILE "/Les 4/texts/output.txt"
 
 int howManyCharsInFile()
