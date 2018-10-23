@@ -7,7 +7,7 @@ class Boek
 	public:
 		Boek();
 		Boek(std::string n);
-		~Boek();
+		virtual ~Boek();
 		std::string naam = "onbekend";
 };
 

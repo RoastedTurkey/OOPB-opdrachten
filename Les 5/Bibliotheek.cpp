@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Bibliotheek.h"
 
 
@@ -34,7 +35,14 @@ Bibliotheek& Bibliotheek::operator=(const Bibliotheek& andereBieb)
 
 void Bibliotheek::teLeen()
 {
-	std::cout << "Momenteel hebben we: " << boek->naam << " te leen" << std::endl;
+	if (boek)
+	{
+		std::cout << "Momenteel hebben we: " << boek->naam << " te leen" << std::endl;
+	}
+	else
+	{
+		std::cout << "Momenteel hebben we geen boeken te leen" << std::endl;
+	}
 }
 
 void Bibliotheek::voegToe(std::string n)
@@ -47,12 +55,22 @@ void Bibliotheek::voegToe(std::string n)
 	boek = new Boek(n);
 }
 
-Boek* Bibliotheek::leenBoek()
+Boek* Bibliotheek::boekLenen()
 {
-	return boek;
+	if (boek)
+	{
+		Boek* leenBoek = boek;
+		boek = NULL;
+		return leenBoek;
+	}
+	else
+	{
+		std::cout << "Ik zei, we hebben momenteel geen boeken te leen" << std::endl;
+		return NULL;
+	}
 }
 
-void Bibliotheek::terugBoek(Boek* b)
+void Bibliotheek::boekTerugbrengen(Boek* b)
 {
 	if (!boek)
 	{
@@ -60,6 +78,6 @@ void Bibliotheek::terugBoek(Boek* b)
 	}
 	else
 	{
-		std::cout << "Sorry, geen boeken passen meer in de bieb." << std::endl;
+		std::cout << "Sorry, er passen geen boeken meer in de bieb." << std::endl;
 	}
 }

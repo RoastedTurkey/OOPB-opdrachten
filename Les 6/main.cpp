@@ -1,4 +1,8 @@
 #include <iostream>
+#include "Intercity.h"
+#include "StopTrein.h"
+#include "Thalys.h"
+#include "ICE.h"
 
 //Abstract classes can't be instantiated
 //a way to force people to make the subclasses

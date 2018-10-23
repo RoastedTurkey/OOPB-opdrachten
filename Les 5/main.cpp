@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Bibliotheek.h"
 
 //when self managing memory, always have the big three: Copy-constructor, Destructor, and Assignment operator
@@ -38,6 +39,20 @@ int main()
 	bieb1.teLeen();
 	bieb2.teLeen();
 	bieb3.teLeen();
+
+	Boek* leenBoek1 = bieb1.boekLenen();
+	Boek* leenBoek2 = bieb2.boekLenen();
+
+	bieb1.teLeen();
+	bieb2.teLeen();
+
+	bieb1.boekTerugbrengen(leenBoek2);
+	bieb1.boekTerugbrengen(leenBoek1);
+
+	bieb2.boekTerugbrengen(leenBoek1);
+
+	bieb1.teLeen();
+	bieb2.teLeen();
 
 	//wachten op input
 	char p;

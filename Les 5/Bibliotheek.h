@@ -7,14 +7,14 @@ class Bibliotheek
 {
 	public:
 		Bibliotheek();
-		~Bibliotheek();
+		virtual ~Bibliotheek();
 		Bibliotheek(const Bibliotheek& bibliotheek);
 		Bibliotheek& operator=(const Bibliotheek&);
 
 		void teLeen();
 		void voegToe(std::string n);
-		Boek* leenBoek();
-		void terugBoek(Boek* b);
+		Boek* boekLenen();
+		void boekTerugbrengen(Boek* b);
 	private:
 		Boek* boek = new Boek();
 };
