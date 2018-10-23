@@ -6,11 +6,11 @@ class Trein
 		virtual ~Trein();
 
 		float berekenOpbrengst();
+		virtual void vertelSom() = 0;
 
 	private:
 		int passagiers;
 		float prijsKaartje = 2.5f;
-		virtual void ditIsEenAbstractClassNu() = 0;
 
 };
 

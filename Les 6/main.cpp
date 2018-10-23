@@ -18,8 +18,21 @@
 
 int main()
 {
+	Intercity i = Intercity();
+	StopTrein s = StopTrein();
+
+	Thalys t = Thalys();
+	ICE c = ICE();
+
+	i.vertelSom();
+	s.vertelSom();
+	t.vertelSom();
+	c.vertelSom();
 
 
+	//wachten op input
+	char p;
+	std::cin >> p;
 
 	return 0;
 }

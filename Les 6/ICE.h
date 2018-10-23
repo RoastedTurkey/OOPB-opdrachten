@@ -4,8 +4,9 @@ class ICE :
 	public HogeSnelheidsTrein
 {
 	public:
-		ICE(int mens, float extra);
+		ICE();
 		virtual ~ICE();
+		void vertelSom() override;
 
 };
 

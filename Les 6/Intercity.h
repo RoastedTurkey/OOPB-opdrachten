@@ -4,7 +4,8 @@ class Intercity :
 	public Trein
 {
 	public:
-		Intercity(int mens);
+		Intercity();
 		virtual ~Intercity();
+		void vertelSom() override;
 };
 

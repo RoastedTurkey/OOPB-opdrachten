@@ -4,7 +4,8 @@ class StopTrein :
 	public Trein
 {
 	public:
-		StopTrein(int mens);
+		StopTrein();
 		virtual ~StopTrein();
+		void vertelSom() override;
 };
 

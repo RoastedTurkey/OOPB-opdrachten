@@ -4,8 +4,9 @@ class Thalys :
 	public HogeSnelheidsTrein
 {
 	public:
-		Thalys(int mens, float extra);
+		Thalys();
 		~Thalys();
+		void vertelSom() override;
 
 };
 

@@ -5,12 +5,12 @@ class HogeSnelheidsTrein
 		HogeSnelheidsTrein(int mens, float extra);
 		virtual ~HogeSnelheidsTrein();
 		float berekenOpbrengst();
+		virtual void vertelSom() = 0;
 
 	private:
 		int passagiers;
 		float prijsKaartje = 3.8f;
 		float extraToeslag;
-		virtual void ditIsEenAbstractClassNu() = 0;
 
 };
 
